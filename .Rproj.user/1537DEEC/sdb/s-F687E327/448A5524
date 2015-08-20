@@ -1,12 +1,12 @@
 {
-    "contents" : "generaAR.R <- function(n,phi){\n  # This code generates n observations\n  # from an AR(1) process with autoregressive\n  # parameter phi and white noise variance = 1.  \n  # The program burns mburn = 200 observations\n  # before the process gets to stationary conditions.\n  \n  # Se abre la libreria ggplot2\n  library(\"ggplot2\")\n  \n  mburn <- 200\n  \n  m <- n + mburn\n  \n  y <- {1:m}\n  tiempo <- {1:n}\n  \n  # generar ruido blanco\n  eps <- rnorm(m)\n  \n  y[1] <- eps[1]\n  \n  \n  # generar proceso AR(1) en vec y[]\n  for(i in {2:m}){\n    \n    y[i] <- phi*y[i-1] + eps[i]\n    \n  }\n  \n  # tirar las primeras mburn observaciones\n  y <- y[(mburn+1):m]\n  \n  dat<- data.frame(tiempo,y)\n  \n  # graficar la serie de tiempo\n  bp<- ggplot(data=dat, aes(x=tiempo, y=y, group=1)) + \n    geom_line(colour=\"orange\", linetype=\"solid\", size=1.5) + \n    geom_point(colour=\"red\", size=4, shape=21, fill=\"white\")\n   \n  bp + ggtitle(\"Grafica Ruido Blanco\\n AR(1)\") + \n    theme(plot.title = element_text(lineheight=.8, face=\"bold\"))\n  # fin de la funcion\n}\n",
+    "contents" : "generaAR.R <- function(n,phi){\n  # This code generates n observations\n  # from an AR(1) process with autoregressive\n  # parameter phi and white noise variance = 1.  \n  # The program burns mburn = 200 observations\n  # before the process gets to stationary conditions.\n  \n  # Se abre la libreria ggplot2\n  library(\"ggplot2\")\n  \n  mburn <- 200\n  \n  m <- n + mburn\n  \n  y <- {1:m}\n  tiempo <- {1:n}\n  \n  # generar ruido blanco\n  eps <- rnorm(m)\n  \n  y[1] <- eps[1]\n  \n  \n  # generar proceso AR(1) en vec y[]\n  for(i in {2:m}){\n    \n    y[i] <- phi*y[i-1] + eps[i]\n    \n  }\n  \n  # tirar las primeras mburn observaciones\n  y <- y[(mburn+1):m]\n  \n  dat<- data.frame(tiempo,y)\n  \n  # graficar la serie de tiempo\n  bp<- ggplot(data=dat, aes(x=tiempo, y=y, group=1)) + \n    geom_line(colour=\"blue\", linetype=\"solid\", size=1.5) + \n    geom_point(colour=\"red\", size=4, shape=21, fill=\"white\")\n   \n  bp + ggtitle(\"Grafica Ruido Blanco\\n AR(1)\") + \n    theme(plot.title = element_text(lineheight=.8, face=\"bold\"))\n  # fin de la funcion\n}\n",
     "created" : 1440031842119.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1874419049",
+    "hash" : "3764456000",
     "id" : "448A5524",
-    "lastKnownWriteTime" : 1440033988,
+    "lastKnownWriteTime" : 1440050718,
     "path" : "~/Estadistica 3/generaAR.R",
     "project_path" : "generaAR.R",
     "properties" : {

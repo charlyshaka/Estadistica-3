@@ -35,7 +35,7 @@ generaAR.R <- function(n,phi){
   
   # graficar la serie de tiempo
   bp<- ggplot(data=dat, aes(x=tiempo, y=y, group=1)) + 
-    geom_line(colour="orange", linetype="solid", size=1.5) + 
+    geom_line(colour="blue", linetype="solid", size=1.5) + 
     geom_point(colour="red", size=4, shape=21, fill="white")
    
   bp + ggtitle("Grafica Ruido Blanco\n AR(1)") + 
