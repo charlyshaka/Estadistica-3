@@ -1,0 +1,17 @@
+{
+    "contents" : "ar2simA2.R <- function(phi,n1,sigma){\n  #\n  #  genera procesos AR(2) con parametros  phi = (phi1,phi2)\n  #  Al correr se debe asignar phi = c(0.1 ,0.2) n1=100, sigma = 1,  p. ej.\n  #  esta funcion  puede requerir cargar librerias \"tseries\" y \"timeSeries\"\n  #  Esta version (ACTIVIDAD 2) de funcion es para observar la sucesion\n  #  de autocorrelacion \n  \n  arcoeffs <- c(1,-phi)\n  \n  raices <- polyroot(arcoeffs)\n  \n  minMod <- min(Mod(raices))\n  \n  if(minMod <= 1){print(\"proceso no estacionario\")\n                  print(raices)\n  }\n  \n  ts.sim <- arima.sim(n = n1, list(ar = phi),\n                      sd = sigma)\n  \n  frame()\n  par(mfrow=c(1,2))\n  acf(ts.sim)\n  \n  \n  ts.plot(ts.sim)\n  \n  \n}",
+    "created" : 1441084617629.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1298142573",
+    "id" : "27F29930",
+    "lastKnownWriteTime" : 1441084643,
+    "path" : "~/Estadistica 3/ar2simA2.R",
+    "project_path" : "ar2simA2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

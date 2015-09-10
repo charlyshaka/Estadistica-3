@@ -1,0 +1,17 @@
+{
+    "contents" : "phi1<-0.1026 \nphi2<-0.036\nphi3<-0.0846\nphi4<-0.1178\nn<-300\n  \nmburn <- 300\n\nm <- n + mburn\n\ny <- {1:m}\ntiempo <- {1:n}\n\n# generar ruido blanco\neps <- rnorm(m)\n\ny[1] <- eps[1]\ny[2] <- eps[2]\ny[3] <- eps[3]\ny[4] <- eps[4]\n\n# generar proceso AR(1) en vec y[]\nfor(i in {5:m}){\n  \n  y[i] <- phi1*y[i-1] +phi2*y[i-2]+phi3*y[i-3]+phi4*y[i-4] + eps[i]}\n\n# tirar las primeras mburn observaciones\ny <- y[(mburn+1):m]",
+    "created" : 1441415070392.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2943573801",
+    "id" : "19AF4A39",
+    "lastKnownWriteTime" : 578055781,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled5"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

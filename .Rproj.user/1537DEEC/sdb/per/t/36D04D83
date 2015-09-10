@@ -1,0 +1,16 @@
+{
+    "contents" : "ma2sim.R <- function(theta,n1,sigma){\n#\n#  genera procesos MA(2)   theta = (theta1, theta2)\n#  al correr la funcion asignar phi = c(0.2,0.8), n1 = 100, sigma = 1, p.ej.\n#  esta funcion puede requerir cargar librerias \"tseries\" y \"timeSeries\"\n\n\nts.sim <- arima.sim(n = n1, list(ma = theta),\n          sd = sigma)\n\n\nframe()\npar(mfrow=c(1,2))\n\nacf(ts.sim)\n    \n    \nts.plot(ts.sim)\n\n\n\n}\n\n\n\n\n\n\n\n",
+    "created" : 1441084397383.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2343855003",
+    "id" : "36D04D83",
+    "lastKnownWriteTime" : 1441084891,
+    "path" : "C:/Users/Administrador/Google Drive/ESAD Lic En Matematicas/9. Cuatrimestre/Estadistica 3/Codigos/ma2sim.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1441403348743.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "30218837",
+    "lastKnownWriteTime" : 1818846758,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "Datos",
+        "contentUrl" : "content?title=Datos&file=8aeb23e26af84b9b9e6aa218c350c271.htm",
+        "displayedObservations" : 301,
+        "displayedVariables" : 1,
+        "totalObservations" : 301,
+        "variables" : 1
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
